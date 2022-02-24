@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 
-RUN apt update && apt upgrade -y && apt install -y curl git tar && rm -rf /var/lib/apt/lists/*
+RUN apt update && apt upgrade -y && apt install -y curl build-essential python3 git tar && rm -rf /var/lib/apt/lists/*
 
 RUN curl https://install.meteor.com/ | /bin/sh \
   && useradd -ms /bin/bash meteor
